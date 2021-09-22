@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Arvo", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+h1 {
+  color: #fff;
+  font-size: 5rem;
+  letter-spacing: 5px;
+  text-shadow: 0 0.5rem 0.1rem rgba(255, 0, 0, 0.8);
+}
+
+nav ul {
+  margin-top: 0;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul li {
+  color: white;
+  list-style-type: none;
+  padding-left: 3rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-shadow: 0 0.3rem 0.1rem rgba(255, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+.nav-link:hover {
+  color: red;
+  text-shadow: 0 0.1rem 0.1rem rgba(255, 255, 255, 0.5);
+  /* text-decoration: underline; */
+}
+
+nav ul i {
+  padding-right: 0rem;
+  padding-left: 4rem;
+  font-size: 2rem;
+  text-shadow: 0;
+  color: #fff;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.active{
+  color: red;
+  text-shadow: 0 0.1rem 0.1rem rgba(255, 0, 0);
+
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer div {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}

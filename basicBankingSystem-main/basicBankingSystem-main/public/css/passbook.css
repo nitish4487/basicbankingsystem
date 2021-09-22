@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin:0
+}
+
+body{
+    font-family: 'Kaisei HarunoUmi',sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+nav ul {
+    margin-top: 0;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0);
+  }
+  
+  nav ul li {
+    color: white;
+    list-style-type: none;
+    padding-left: 3rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    /* text-shadow: 0 0.3rem 0.1rem rgba(255, 0, 0); */
+    letter-spacing: 2px;
+  }
+  .nav-link:hover {
+    color: red;
+    text-shadow: 0 0.1rem 0.1rem rgba(255, 0, 0);
+    /* text-decoration: underline; */
+  }
+  
+  .active{
+    color: red;
+    text-shadow: 0 0.1rem 0.1rem rgba(255, 0, 0);
+  
+  }
+  
+  nav ul i {
+    padding-right: 0rem;
+    padding-left: 4rem;
+    font-size: 2rem;
+    text-shadow: 0;
+    color: #fff;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+/*   
+.container{
+  height: 100;
+  margin: 4rem;
+} */
+  
+.container button{
+  position: absolute;
+  left:80%;
+  top:10%;
+  padding:1rem 5rem;
+  border-radius: 5rem;
+  border:none;
+  background-color: cyan;
+
+}
+
+.container button a{
+  font-family: 'Kaisei HarunoUmi',sans-serif;
+  color:black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+
+.container h1{
+    margin-top:8rem ;
+    font-family: 'Arvo',sans-serif;
+    color:red;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0.16rem 0.1rem rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: 3rem;
+  /* font-weight: 700; */
+
+}
+
+.container .card{
+    padding:3rem;
+
+    border:8px solid cyan;
+    border-radius: 5rem;
+    
+    /* background-color: black; */
+}
+
+.container .card label{
+    font-family: 'Kaisei HarunoUmi',sans-serif ;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color:red;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0.1rem 0.1rem rgba(255, 0, 0, 0.8);
+
+}
+.container .card span{
+    font-size: 1.3rem;
+    text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.8);
+
+
+}
+
+.container .card .label{
+    margin:2rem
+}
+
+.container .passbook{
+    margin-top:5rem;
+    /* position: absolute;
+    top:40rem; */
+
+ 
+}
+
+.container .passbook .table {
+    margin-top:4rem;
+     position: absolute;
+     left:15%;
+    width: 100%;
+    
+}
+    
+.container .passbook table thead{
+      background-color: rgb(0, 0, 0);
+     
+     
+}
+    
+.container .passbook table thead th{
+      font-size: 1.5rem;
+      font-weight: 700;
+      color:white;
+      text-shadow: 0 0.1rem 0.1rem white;
+      padding:1rem 2rem;
+      border-radius: 4rem;
+}
+    
+.container .passbook table tr td{
+      padding:.5rem 6rem;
+      font-size: 1.5rem;
+    border-radius: 5rem;
+     text-align: center;
+}
+    
+.container .passbook table tr td:hover{
+      background-color: cyan;
+}
+    
+.container .passbook table tr td button{
+      padding: 1rem 5rem;
+      border-radius: 4rem;
+      border:5px solid cyan;
+      background-color: #fff;
+      font-size: 1.3rem;
+      cursor: pointer;
+    
+}
+    
+.container .passbook table tr td button:hover{
+      background-color: cyan;
+    
+}
+    
+.container .passbook table tr td button a{
+      color:black;
+      text-decoration: none;
+}
+    
+.container .bottom{
+  margin:10rem;
+}
+
+
+@media(max-width:1500px){
+  
+  
+  .container button{
+    position: absolute;
+    left:70%;
+    padding:1rem 2rem;
+    
+  }
+
+  .container .table{
+    width:100%;
+  overflow-x: auto;
+
+  }
+  
+}
+
+@media(max-width:800px){
+  .container {
+    margin-top: 5rem;
+  }
+  .container button{
+    position: absolute;
+    left:50%;
+    top:15%;
+    padding:1rem 2rem;
+    transform: translate(-50%,-50%);
+  }
+
+}
+

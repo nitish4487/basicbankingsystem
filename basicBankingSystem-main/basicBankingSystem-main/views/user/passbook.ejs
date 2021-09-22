@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/passbook.css">
+   
+
+    <title>Passbook</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <i class="fas fa-university"></i>
+          <li><a class="nav-link" href="/">Home</a></li>
+          <li><a class="nav-link " href="/userDetails">User Details</a></li>
+          <!-- <li><a class="nav-link" href="/transfer">Transfer Money</a></li> -->
+        </ul>
+      </nav>
+    <div class="container">
+        <h1>Profile</h1>
+        <button><a href="/userDetails/<%= customer._id %>/transfer  ">Transfer</a></button>
+        <div class="card">
+            <div class="label"><label for="name"> Name :  </label><span><%= customer.name %> </span><br></div>
+            <div class="label"><label for="account">Acc no. : </label>  <span><%= customer._id %> </span><br></div>
+            <div class="label"><label for="contact">Contact : </label>  <span><%= customer.contact %></span> <br></div>
+            <div class="label"><label for="email">Email :</label> <span><%= customer.email %></span>   <br></div>
+            <div class="label"><label for="balance">Balance :</label>  <span> <%= customer.balance %></span> <br></div>
+        </div>
+        <div class="passbook">
+            <h1 >Passbook</h1>
+            <div class="table">
+                <table>
+                  <thead>
+                    <tr>
+                        <th scope="col" colspan="2">SENDER</th>
+                    
+                        <th scope="col" colspan="2">RECEIVER</th>
+                        
+                        <th scope="col" rowspan="2">TRANSACTION AMOUNT</th>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <!-- <th scope="col">ACCOUNT NUMBER</th> -->
+                      <th scope="col">NAME</th>
+                      <th scope="col">ID</th>
+                      
+                      <!-- <th scope="col">ACCOUNT NUMBER</th> -->
+
+                      <th scope="col">NAME</th>
+                
+                      </tr>
+                    
+                  </thead>
+                 
+                    <% for(let i of transactions){ 
+                      if(i.senderId==customer.id||i.receiverId==customer.id){ %> 
+                        <tr>
+                        <td><%=i.senderId%></td>
+                        
+                        <td><%=i.senderName%></td>
+                        <td><%=i.receiverId%></td>
+                      
+                        <td><%=i.receiverName%></td>
+                        <td><%=i.transactionAmount%></td>
+                      
+                    
+                      </tr>
+                    <%} }%> 
+                  
+                 
+                 
+                </table>
+                <div class="bottom"></div>
+              </div>
+        </div>
+
+    </div>
+</body>
+</html>

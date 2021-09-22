@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/transactionAmount.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <i class="fas fa-university"></i>
+          <li><a class="nav-link" href="/">Home</a></li>
+          <li><a class="nav-link " href="/userDetails">User Details</a></li>
+          <!-- <li><a class="nav-link" href="/transfer">Transfer Money</a></li> -->
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="cardleft">
+            <h1>Sender</h1>
+            <div class="label"><label for="name"> Name :  </label><span><%= sender.name %> </span><br></div>
+            <div class="label"><label for="account">Acc no. : </label>  <span><%= sender._id %> </span><br></div>
+            <div class="label"><label for="contact">Contact : </label>  <span><%= sender.contact %></span> <br></div>
+            <div class="label"><label for="email">Email :</label> <span><%= sender.email %></span>   <br></div>
+            <div class="label"><label for="balance">Balance :</label>  <span> <%= sender.balance %></span> <br></div>
+        </div>
+        <div class="cardright">
+            <h1>Receiver</h1>
+            <div class="label"><label for="name"> Name :  </label><span><%= receiver.name %> </span><br></div>
+            <div class="label"><label for="account">Acc no. : </label>  <span><%= receiver._id %> </span><br></div>
+            <div class="label"><label for="contact">Contact : </label>  <span><%= receiver.contact %></span> <br></div>
+            <div class="label"><label for="email">Email :</label> <span><%= receiver.email %></span>   <br></div>
+            <div class="label"><label for="balance">Balance :</label>  <span> <%= receiver.balance %></span> <br></div>
+        </div>
+       
+      </div>
+      <div class="form">
+        <form action="/userDetails/<%=sender._id%>/transfer/<%=receiver._id%>" method="POST">
+            <label for="amount">Amount: </label>
+            <input type="Number" id="amount" name="amount"><br>
+            <button>Transfer</button>
+        
+            </form>
+      </div>
+      
+    
+</body>
+</html>

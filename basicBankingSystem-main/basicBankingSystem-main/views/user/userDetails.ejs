@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/userDetails.css" />
+    <title>User Details</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <i class="fas fa-university"></i>
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link active" href="/userDetails">User Details</a></li>
+        <!-- <li><a class="nav-link" href="/transfer">Transfer Money</a></li> -->
+      </ul>
+    </nav>
+    <div class="container">
+     
+      <h1>User Details</h1>
+      <div class="table">
+        <table>
+          <thead>
+            <th>ID</th>
+            <th>Account Number</th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Profile and Passbook</th>
+          </thead>
+          <% 
+          for(let i of customers){ %> 
+          <tr>
+            <td><%=i.id%></td>
+            <td><%=i._id%></td>
+            <td><%=i.name%></td>
+            <td><%=i.balance%></td>
+            <td><button><a href="/userDetails/<%=i._id%>">View</a> </button></td>
+          </tr>
+          
+          <% } %> 
+        </table>
+        <div class="bottom">
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>
